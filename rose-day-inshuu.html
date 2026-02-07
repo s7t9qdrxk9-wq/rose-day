@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Rose Day Inshuu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff5f8f, #ff9a9e);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    padding: 50px 20px 80px;
+    max-width: 480px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.2rem;
+    animation: heartbeat 2s infinite;
+}
+
+.sub {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.rose {
+    font-size: 3rem;
+    margin: 20px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+button {
+    margin-top: 25px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #ff5f8f;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.message {
+    margin-top: 30px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    display: none;
+    animation: fadeIn 1.5s forwards;
+}
+
+/* Teddy GIFs */
+.gifs {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gifs img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+    transition: transform 0.4s;
+}
+
+.gifs img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.floating {
+    position: fixed;
+    bottom: -50px;
+    font-size: 1.8rem;
+    animation: rise linear forwards;
+    pointer-events: none;
+}
+
+.sparkle {
+    position: fixed;
+    font-size: 1.2rem;
+    animation: sparkle 1s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sparkle {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(2); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Happy Rose Day</h1>
+    <div class="sub">For my Inshuu ❤️💋🧿</div>
+
+    <div class="rose">🌹</div>
+
+    <button onclick="revealLove()">Tap to Reveal My Heart 🧸💖</button>
+
+    <div class="message" id="loveMessage">
+        Inshuu ❤️💋🧿<br><br>
+        If love had a face,<br>
+        it would smile like you do 💕<br><br>
+        I promise to be your teddy,<br>
+        holding you tight in every season 🌹
+    </div>
+
+    <!-- 🧸 TEDDY BEAR COUPLE GIFS -->
+    <!-- 🧸 KAWAII TEDDY BEAR COUPLE GIFS -->
+    <!-- Teddy bear couple gifs updated -->
+<div class="gifs">
+    <img src="teddy1.gif" alt="Teddy 1" />
+    <img src="teddy2.png" alt="Teddy 2" />
+    <img src="teddy3.gif" alt="Teddy 3" />
+</div>
+
+
+
+
+    <footer>
+        Forever yours,<br>
+        <strong>Sidharth ❤️</strong>
+    </footer>
+</div>
+
+<script>
+function revealLove() {
+    document.getElementById("loveMessage").style.display = "block";
+    fireworks();
+}
+
+setInterval(() => {
+    const el = document.createElement("div");
+    el.className = "floating";
+    el.innerHTML = Math.random() > 0.5 ? "❤️" : "🧸";
+    el.style.left = Math.random() * 100 + "vw";
+    el.style.animationDuration = Math.random() * 3 + 5 + "s";
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 8000);
+}, 400);
+
+document.addEventListener("click", e => {
+    const s = document.createElement("div");
+    s.className = "sparkle";
+    s.innerHTML = "✨";
+    s.style.left = e.clientX + "px";
+    s.style.top = e.clientY + "px";
+    document.body.appendChild(s);
+    setTimeout(() => s.remove(), 1000);
+});
+
+function fireworks() {
+    for (let i = 0; i < 20; i++) {
+        const f = document.createElement("div");
+        f.className = "sparkle";
+        f.innerHTML = "🎆";
+        f.style.left = Math.random() * 100 + "vw";
+        f.style.top = Math.random() * 100 + "vh";
+        document.body.appendChild(f);
+        setTimeout(() => f.remove(), 1200);
+    }
+}
+</script>
+
+</body>
+</html>
